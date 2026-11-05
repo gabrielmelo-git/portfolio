@@ -53,13 +53,23 @@ function loadElements(){
       document.getElementById('whatsapp').href = dados.whatsapp;
 
       const linktel = document.getElementById('telefone');
-      linktel.href = `tel:+55${dados.telefone}`;
       const apenasNumeros = dados.telefone.replace(/\D/g, "");
-      const ddd = apenasNumeros.substring(0, 2);
-      const parte1 = apenasNumeros.substring(2, 7);
-      const parte2 = apenasNumeros.substring(7, 11);
-      const telefoneFormatado = `(${ddd}) ${parte1} - ${parte2}`;
-      linktel.textContent = `${telefoneFormatado}`;
+      linktel.href = `tel:+55${apenasNumeros}`;
+      let telefoneFormatado = "";
+      if (apenasNumeros.length === 11) {
+          const ddd = apenasNumeros.substring(0, 2);
+          const parte1 = apenasNumeros.substring(2, 7);
+          const parte2 = apenasNumeros.substring(7, 11);
+          telefoneFormatado = `(${ddd}) ${parte1} - ${parte2}`;
+      } else if (apenasNumeros.length === 10) {
+        const ddd = apenasNumeros.substring(0, 2);
+        const parte1 = apenasNumeros.substring(2, 6);
+        const parte2 = apenasNumeros.substring(6, 10); 
+        telefoneFormatado = `(${ddd}) ${parte1} - ${parte2}`;
+      } else {
+          telefoneFormatado = dados.telefone;
+      }
+      linktel.textContent = telefoneFormatado;
       
       const linkmail = document.getElementById('email');
       linkmail.href = `mailto:${dados.email}`;
