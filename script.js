@@ -54,7 +54,13 @@ function loadElements(){
 
       const linktel = document.getElementById('telefone');
       linktel.href = `tel:+55${dados.telefone}`;
-      linktel.textContent = `${dados.telefone}`;
+      const apenasNumeros = dados.telefone.replace(/\D/g, "");
+      const ddd = apenasNumeros.substring(0, 2);
+      const parte1 = apenasNumeros.substring(2, 7);
+      const parte2 = apenasNumeros.substring(7, 11);
+      const telefoneFormatado = `(${ddd}) ${parte1} - ${parte2}`;
+      linktel.textContent = `${telefoneFormatado}`;
+      
       const linkmail = document.getElementById('email');
       linkmail.href = `mailto:${dados.email}`;
       linkmail.textContent = `${dados.email}`;
