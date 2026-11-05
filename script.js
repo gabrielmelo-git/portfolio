@@ -12,9 +12,11 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 const modal = document.querySelector("#paper-modal");
 const modalTitle = document.querySelector("#modal-title");
+const pdfIframe = document.querySelector("#pdf-iframe");
 
-function openModal(title) {
+function openModal(title, pdfUrl) {
   modalTitle.textContent = title;
+  pdfIframe.src = pdfUrl; // Carrega o PDF apenas ao abrir
   modal.classList.add("open");
   modal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
@@ -24,10 +26,15 @@ function closeModal() {
   modal.classList.remove("open");
   modal.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
+  pdfIframe.src = ""; // Limpa o PDF ao fechar
 }
 
 document.querySelectorAll(".open-paper").forEach(button => {
-  button.addEventListener("click", () => openModal(button.dataset.paper));
+  button.addEventListener("click", () => {
+    const titulo = button.dataset.paper;
+    const arquivoPdf = button.dataset.pdf || "./documentos/Edicao01.pdf";
+    openModal(titulo, arquivoPdf);
+  });
 });
 
 document.querySelectorAll(".close-modal, .modal-backdrop").forEach(element => {
