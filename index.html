@@ -135,7 +135,7 @@
             <p class="eyebrow">Última edição</p>
             <h3>Um mês de ações, encontros e histórias que merecem ser compartilhadas.</h3>
             <p>Confira a edição mais recente do nosso jornal e acompanhe os projetos, resultados e acontecimentos do instituto.</p>
-            <button class="button button-primary open-paper" data-paper="Jornal do Negro — Edição 01">Visualizar jornal</button>
+            <button class="button button-primary open-paper" data-paper="Jornal do Negro — Edição 01" data-pdf="./documentos/Edicao01.pdf">Visualizar jornal</button>
             <span class="paper-meta">PDF • 01 páginas • Setembro/2026</span>
           </div>
         </article>
@@ -216,10 +216,12 @@
       </div>
       
       <div class="pdf-placeholder">
-        <iframe src="./documentos/Edicao01.pdf" width="100%" height="100%" style="border: none;">
-          <!--<p>Seu navegador não suporta a visualização de PDFs. <a href="./documentos/Edicao01.pdf" target="_blank">Clique aqui para baixar o PDF.</a></p>-->
-        </iframe>
+        <iframe id="pdf-iframe" src="" width="100%" height="100%" style="border: none;"></iframe>
       </div>
+
+      <div class="modal-footer"><span>PDF • Jornal</span><button class="button button-primary close-modal">Fechar visualizador</button></div>
+    </div>
+  </div>
 
       <div class="modal-footer"><span>PDF • Jornal</span><button class="button button-primary close-modal">Fechar visualizador</button></div>
     </div>
