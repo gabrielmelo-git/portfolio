@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Site do Instituto Hospital do Negro.">
   <title>Instituto Hospital do Negro</title>
-  <link rel="icon" href="img_sources/favicon.png" type="img/png">
+  <link rel="icon" href="img_sources/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- CABEÇALHO / NAVEGAÇÃO -->
   <header class="site-header" id="cabecalho">
     <div class="container nav">
       <a class="brand" href="#inicio" aria-label="Hospital do Negro - início">
@@ -29,6 +31,7 @@
   </header>
 
   <main>
+    <!-- HERO / INÍCIO -->
     <section class="hero" id="inicio">
       <div class="hero-image"></div>
       <div class="container hero-content">
@@ -43,6 +46,7 @@
       <div class="hero-note">Desde 2011, construindo solidariedade.</div>
     </section>
 
+    <!-- SOBRE O INSTITUTO -->
     <section class="intro section" id="instituto">
       <div class="container intro-grid">
         <div>
@@ -57,15 +61,7 @@
       </div>
     </section>
 
-    <!--<section class="impact-strip">
-      <div class="container stats">
-        <div><strong>x</strong><span>pessoas alcançadas</span></div>
-        <div><strong>x</strong><span>ações realizadas</span></div>
-        <div><strong>x</strong><span>edições do jornal</span></div>
-        <div><strong>15 anos</strong><span>de atuação</span></div>
-      </div>
-    </section>-->
-
+    <!-- ÁREAS DE ATUAÇÃO -->
     <section class="section" id="atuacao">
       <div class="container">
         <div class="section-heading">
@@ -75,6 +71,7 @@
           </div>
           <p>Nosso trabalho conecta assistência, informação e participação comunitária.</p>
         </div>
+
         <div class="cards">
           <article class="card card-featured">
             <span class="card-number">01</span>
@@ -83,23 +80,29 @@
             <p>Arrecadação e distribuição de alimentos para famílias que precisam de apoio.</p>
             <span class="card-arrow">↗</span>
           </article>
+
           <article class="card">
             <span class="card-number">02</span>
-            <div class="icon"><svg class="card-icon-svg" viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none">
-  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-0-5H20"/>
-</svg></div>
+            <div class="icon">
+              <svg class="card-icon-svg" viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-0-5H20"/>
+              </svg>
+            </div>
             <h3>Conscientização</h3>
             <p>Campanhas e ações educativas para estimular solidariedade e cidadania.</p>
             <span class="card-arrow">↗</span>
           </article>
+
           <article class="card">
             <span class="card-number">03</span>
-            <div class="icon"><svg class="card-icon-svg" viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none">
-  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-  <circle cx="9" cy="7" r="4"/>
-  <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-</svg></div>
+            <div class="icon">
+              <svg class="card-icon-svg" viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
             <h3>Informação</h3>
             <p>Um jornal periódico para registrar ações, histórias e assuntos da comunidade.</p>
             <span class="card-arrow">↗</span>
@@ -108,13 +111,7 @@
       </div>
     </section>
 
-    <!--<section class="mission">
-      <div class="container mission-inner">
-        <p class="eyebrow">Nossa missão</p>
-        <blockquote>“Promover saúde integral e equidade racial, combatendo desigualdades estruturais.”</blockquote>
-      </div>
-    </section>-->
-
+    <!-- PUBLICAÇÕES / JORNAIS -->
     <section class="section newspapers" id="jornais">
       <div class="container">
         <div class="section-heading">
@@ -163,6 +160,7 @@
       </div>
     </section>
 
+    <!-- REDES SOCIAIS -->
     <section class="social-section">
       <div class="container social-grid">
         <div>
@@ -178,6 +176,7 @@
       </div>
     </section>
 
+    <!-- CONTATO -->
     <section class="contact section" id="contato">
       <div class="container contact-grid">
         <div>
@@ -194,9 +193,13 @@
     </section>
   </main>
 
+  <!-- RODAPÉ -->
   <footer>
     <div class="container footer-top">
-      <a class="brand footer-brand" href="#inicio"><img src="img_sources/hospital_icon.png" alt="Logo Hospital do Negro" class="brand-mark"><span>Hospital <strong>do Negro</strong></span></a>
+      <a class="brand footer-brand" href="#inicio">
+        <img src="img_sources/hospital_icon.png" alt="Logo Hospital do Negro" class="brand-mark">
+        <span>Hospital <strong>do Negro</strong></span>
+      </a>
       <p>Solidariedade que se transforma em ação.</p>
       <a class="back-top" href="#inicio">Voltar ao topo ↑</a>
     </div>
@@ -207,11 +210,15 @@
     </div>
   </footer>
 
+  <!-- MODAL VISUALIZADOR DE PDF -->
   <div class="modal" id="paper-modal" aria-hidden="true">
     <div class="modal-backdrop"></div>
     <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <div class="modal-header">
-        <div><span class="eyebrow">Visualizador</span><h2 id="modal-title">Jornal do Negro</h2></div>
+        <div>
+          <span class="eyebrow">Visualizador</span>
+          <h2 id="modal-title">Jornal do Negro</h2>
+        </div>
         <button class="close-modal" aria-label="Fechar">×</button>
       </div>
       
@@ -219,13 +226,12 @@
         <iframe id="pdf-iframe" src="" width="100%" height="100%" style="border: none;"></iframe>
       </div>
 
-      <div class="modal-footer"><span>PDF • Jornal</span><button class="button button-primary close-modal">Fechar visualizador</button></div>
+      <div class="modal-footer">
+        <span>PDF • Jornal</span>
+        <button class="button button-primary close-modal">Fechar visualizador</button>
+      </div>
     </div>
   </div>
-
-      <div class="modal-footer"><span>PDF • Jornal</span><button class="button button-primary close-modal">Fechar visualizador</button></div>
-    </div>
-</div>
 
   <script src="script.js"></script>
   <script>loadElements();</script>
