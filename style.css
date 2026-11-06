@@ -739,6 +739,10 @@ footer {
 }
 
 @media (max-width: 800px) {
+  .paper-cover {
+    padding-left: 20px;
+  }
+  
   .nav-links {
     display: none;
     position: absolute;
