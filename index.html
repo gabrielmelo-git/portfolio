@@ -210,6 +210,27 @@
     </div>
   </div>
 
+  <!-- MODAL: LISTA DE TODAS AS EDIÇÕES -->
+  <div class="modal" id="all-papers-modal" aria-hidden="true">
+    <div class="modal-backdrop" id="close-all-modal-bg"></div>
+    <div class="modal-window" role="dialog" aria-modal="true" style="max-width: 960px;">
+      <div class="modal-header">
+        <div><span class="eyebrow">Acervo Completo</span><h2>Todas as Edições</h2></div>
+        <button class="close-modal" id="close-all-modal-btn" aria-label="Fechar">×</button>
+      </div>
+      
+      <div class="pdf-placeholder" style="overflow-y: auto; align-items: flex-start; padding: 25px;">
+        <!-- Grid dinâmico com todas as edições -->
+        <div id="modal-all-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; width: 100%;"></div>
+      </div>
+
+      <div class="modal-footer">
+        <span>Acervo Digital • Instituto Hospital do Negro</span>
+        <button class="button button-primary" id="close-all-modal-footer">Fechar</button>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
   <script>loadElements();</script>
 </body>
