@@ -14,7 +14,7 @@
       "titulo": "Um mês de ações, encontros e histórias que merecem ser compartilhadas.",
       "descricao": "Confira a edição mais recente do nosso jornal e acompanhe os projetos, resultados e acontecimentos do instituto.",
       "paginas": "01 páginas",
-      "pdf": "./documentos/Edicao01.pdf"
+      "pdf": "../documentos/Edicao01.pdf"
     },
     {
       "numero": "02",
@@ -23,7 +23,7 @@
       "titulo": "Novas diretrizes e expansão do atendimento médico comunitário.",
       "descricao": "Veja os avanços das nossas frentes de conscientização e apoio à comunidade.",
       "paginas": "04 páginas",
-      "pdf": "./documentos/Edicao02.pdf"
+      "pdf": "../documentos/Edicao02.pdf"
     },
     {
       "numero": "03",
@@ -32,7 +32,7 @@
       "titulo": "Campanha de saúde preventiva e educação para todos.",
       "descricao": "Um panorama completo das ações realizadas no último trimestre do ano.",
       "paginas": "04 páginas",
-      "pdf": "./documentos/Edicao03.pdf"
+      "pdf": "../documentos/Edicao03.pdf"
     },
     {
       "numero": "04",
@@ -41,7 +41,7 @@
       "titulo": "Retrospectiva anual e metas para o próximo ciclo do instituto.",
       "descricao": "Celebramos juntos as conquistas e o impacto gerado ao longo de mais um ano.",
       "paginas": "06 páginas",
-      "pdf": "./documentos/Edicao04.pdf"
+      "pdf": "../documentos/Edicao04.pdf"
     }
   ]
 }
