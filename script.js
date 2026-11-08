@@ -1,63 +1,18 @@
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+document.addEventListener("DOMContentLoaded", () => {
+  // --- MENU MOBILE ---
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
 
-menuToggle?.addEventListener("click", () => {
-  const open = navLinks.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", open);
-});
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", open);
+    });
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => navLinks.classList.remove("open"));
-});
-
-const modal = document.querySelector("#paper-modal");
-const modalTitle = document.querySelector("#modal-title");
-const pdfIframe = document.querySelector("#pdf-iframe");
-
-function openModal(title, pdfUrl) {
-  modalTitle.textContent = title;
-  pdfIframe.src = pdfUrl;
-  modal.classList.add("open");
-  modal.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
-}
-
-function closeModal() {
-  modal.classList.remove("open");
-  modal.setAttribute("aria-hidden", "true");
-  document.body.style.overflow = "";
-  pdfIframe.src = "";
-}
-
-document.querySelectorAll(".open-paper").forEach(button => {
-  button.addEventListener("click", () => {
-    const titulo = button.dataset.paper;
-    const arquivoPdf = button.dataset.pdf || "./documentos/Edicao01.pdf";
-    openModal(titulo, arquivoPdf);
-  });
-});
-
-document.querySelectorAll(".close-modal, .modal-backdrop").forEach(element => {
-  element.addEventListener("click", closeModal);
-});
-
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape" && modal.classList.contains("open")) {
-    closeModal();
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => navLinks.classList.remove("open"));
+    });
   }
-});
-
-// --- MENU MOBILE ---
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-menuToggle?.addEventListener("click", () => {
-  const open = navLinks.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", open);
-});
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => navLinks.classList.remove("open"));
 });
 
 // --- MODAL DE PDF ---
@@ -82,7 +37,7 @@ function closeModal() {
   pdfIframe.src = "";
 }
 
-// Ouvintes globais para botões de abrir PDF gerados na página
+// Delegação de evento global para os botões de PDF (funciona com elementos dinâmicos)
 document.addEventListener("click", (e) => {
   const button = e.target.closest(".open-paper");
   if (button) {
@@ -98,7 +53,7 @@ document.querySelectorAll(".close-modal, .modal-backdrop").forEach(element => {
 });
 
 document.addEventListener("keydown", event => {
-  if (event.key === "Escape" && modal?.classList.contains("open")) {
+  if (event.key === "Escape") {
     closeModal();
     closeAllModal();
   }
@@ -153,7 +108,7 @@ function carregarJornais(jornais) {
     `;
   }
 
-  // 2. Edições Anteriores Menores (Se houver mais de uma)
+  // 2. Edições Anteriores Menores (Se houver)
   const anteriores = jornais.slice(1, 4);
   const archiveGrid = document.getElementById('archive-paper-grid');
   if (archiveGrid) {
@@ -196,7 +151,7 @@ function carregarJornais(jornais) {
 
 // --- CARREGAMENTO GERAL (DADOS E JORNAIS) ---
 function loadElements() {
-  fetch('./data/dados.json')
+  fetch('data/dados.json')
     .then(response => {
       if (!response.ok) {
         throw new Error('Erro ao carregar o arquivo JSON. Status: ' + response.status);
