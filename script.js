@@ -196,7 +196,7 @@ function carregarJornais(jornais) {
 
 // --- CARREGAMENTO GERAL (DADOS E JORNAIS) ---
 function loadElements() {
-  fetch('data/dados.json')
+  fetch('./data/dados.json')
     .then(response => {
       if (!response.ok) {
         throw new Error('Erro ao carregar o arquivo JSON. Status: ' + response.status);
