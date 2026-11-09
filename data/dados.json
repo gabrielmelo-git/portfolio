@@ -42,6 +42,15 @@
       "descricao": "Celebramos juntos as conquistas e o impacto gerado ao longo de mais um ano.",
       "paginas": "06 páginas",
       "pdf": "../documentos/Edicao04.pdf"
-    }
+    },
+    {
+      "numero": "05",
+      "edicaoFormatada": "EDIÇÃO 05",
+      "mesAno": "Janeiro/2027",
+      "titulo": "Retrospectiva anual e metas para o próximo ciclo do instituto.",
+      "descricao": "Celebramos juntos as conquistas e o impacto gerado ao longo de mais um ano.",
+      "paginas": "02 páginas",
+      "pdf": "../documentos/Edicao05.pdf"
+    }  
   ]
 }
